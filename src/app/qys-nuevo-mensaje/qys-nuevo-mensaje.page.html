@@ -1,0 +1,61 @@
+
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="end">
+   <ion-button class="regreso"  (click)="closeModal()">      
+       <ion-icon name="close"></ion-icon>
+   </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <br>
+  <div class="primer_titulo">
+  <label class="primer_titulo1" >NUEVO </label><label class="primer_titulo2">MENSAJE</label>
+</div>
+<br>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit_qs(f)">
+
+    <ion-list hidden *ngFor="let usuario of usuarios">
+
+      <ion-item >
+        <ion-label position="floating">Ticket</ion-label>
+        <ion-input  ngModel={{id}} name="id_ticket"  ></ion-input>
+      </ion-item>
+
+   
+    <ion-item >
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  ngModel="{{usuario.id}}" name="id_remitente"></ion-input>
+    </ion-item>
+    </ion-list>
+
+      <!-- <ion-item>
+        <ion-label>Archivo</ion-label><br>
+         <ion-button slot="end" color="dark">
+             <ion-icon name="link" size="large"></ion-icon>
+             </ion-button>
+        </ion-item> -->
+    
+       
+
+    <ion-item  >
+      <ion-input  ngModel name="mensaje" placeholder="Descripcion"></ion-input>
+    </ion-item>
+
+    <br>
+
+    <br>
+    <div class="center">
+
+      <ion-button  type="submit">Registrar</ion-button>
+      </div>
+  </form>
+
+
+  
+</ion-content>

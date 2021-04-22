@@ -1,0 +1,184 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="regreso" (click)="closeModal()" >
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <br>
+  <br>
+  <div class="primer_titulo">
+  <label class="primer_titulo1" >NUEVA </label><label class="primer_titulo2">ALERTA</label>
+</div>
+<br>
+
+<ion-item lines="none">
+  <ion-grid>
+    <ion-row>
+      
+
+      <ion-col class="bot"  size="5">
+        <div class="icon1" >
+          <ion-icon name="medkit-outline"></ion-icon> 
+
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div>
+        </div>
+      </ion-col>
+      <ion-col class="bot"  size="5">
+        <div class="icon1" >
+          <ion-icon name="car-outline"></ion-icon>
+        </div>
+      </ion-col>
+      
+      
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+<br>
+<ion-item lines="none">
+  <ion-grid>
+    <ion-row>
+      
+
+      <ion-col class="bot"  size="5">
+        <div class="icon1" >
+          <ion-icon name="chevron-up-circle-outline"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div>
+        </div>
+      </ion-col>
+      <ion-col class="bot"  size="5">
+        <div class="icon1" >
+          <ion-icon name="paw-outline"></ion-icon>
+        </div>
+      </ion-col>
+      
+      
+    </ion-row>
+  </ion-grid>
+</ion-item>
+<br>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit_medica(f)">
+    <ion-list hidden *ngFor="let usuario of usuarios">
+
+    <ion-item >
+      <ion-label position="floating">Residente</ion-label>
+      <ion-input  ngModel="{{usuario.id_residencial}}" name="id_residencial"  ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  ngModel="{{usuario.id}}" name="id_usuario"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input   ngModel="Médica" name="titulo"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-button fill="outline" expand="block" color="primary" class="ion-margin-top" type="submit">
+      <ion-icon name="medkit-outline"></ion-icon> Médica
+    </ion-button>
+
+  </form>
+
+
+  <form #h="ngForm" (ngSubmit)="onSubmit_policia(h)">
+    <ion-list hidden *ngFor="let usuario of usuarios">
+
+    <ion-item >
+      <ion-label position="floating">Residente</ion-label>
+      <ion-input  ngModel="{{usuario.id_residencial}}" name="id_residencial"  ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  ngModel="{{usuario.id}}" name="id_usuario"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input   ngModel="Vigilancia" name="titulo"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-button fill="outline" expand="block" color="primary" class="ion-margin-top" type="submit">
+      <ion-icon name="car-outline"></ion-icon> Vigilancia
+    </ion-button>
+
+  </form>
+
+
+  <form #j="ngForm" (ngSubmit)="onSubmit_proteccion(j)">
+    <ion-list hidden *ngFor="let usuario of usuarios">
+
+    <ion-item >
+      <ion-label position="floating">Residente</ion-label>
+      <ion-input  ngModel="{{usuario.id_residencial}}" name="id_residencial"  ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  ngModel="{{usuario.id}}" name="id_usuario"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input   ngModel="Protección Civil" name="titulo"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-button fill="outline" expand="block" color="primary" class="ion-margin-top" type="submit">
+      <ion-icon name="chevron-up-circle-outline"></ion-icon> Protección Civil</ion-button>
+
+  </form>
+
+  <form #i="ngForm" (ngSubmit)="onSubmit_mascota(i)">
+    <ion-list hidden *ngFor="let usuario of usuarios">
+
+    <ion-item >
+      <ion-label position="floating">Residente</ion-label>
+      <ion-input  ngModel="{{usuario.id_residencial}}" name="id_residencial"  ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  ngModel="{{usuario.id}}" name="id_usuario"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input   ngModel="Mascota" name="titulo"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-button fill="outline" expand="block" color="primary" class="ion-margin-top" type="submit">
+      <ion-icon name="paw-outline"></ion-icon> Mascota
+       </ion-button>
+
+  </form>
+
+
+  
+  
+
+
+
+</ion-content>
+

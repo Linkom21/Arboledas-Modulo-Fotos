@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="regreso" defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button class="regreso" [routerLink]="['/inicio']">
+        <ion-icon name="home" color="#083e54"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <br>
+  <div class="primer_titulo">
+    <label class="primer_titulo1" >ESTADO  </label>
+    <label class="primer_titulo2" >DE CUENTA </label>
+</div>
+<br>
+
+<div class="center" *ngFor="let usuario of usuarios">
+            
+  <ion-button  target="_blank" href="https://{{dato_usu}}/plataforma/cliente/{{tipo_usuario}}/imprimir_pdf6.php?idusu={{usuario.id}}&resi={{usuario.id_residencial}}" >
+    Descargar Archivo
+  </ion-button>
+
+</div>
+ <!-- <ion-list *ngFor="let usuario of usuarios">
+
+    <label>https://{{dato_usu}}/plataforma/cliente/movil/imprimir_pdf6.php?idusu={{usuario.id}}&resi={{usuario.id_residencial}}</label>
+
+
+    <ion-item target="_blank"  
+     href="https://{{dato_usu}}/plataforma/cliente/movil/imprimir_pdf6.php?idusu={{usuario.id}}&resi={{usuario.id_residencial}}" >
+      <ion-icon name=cart-outline></ion-icon>
+
+      <ion-label>
+        
+         <h3 class="title">Estado de Cuenta </h3>
+       </ion-label>
+     </ion-item>
+
+     <ion-item target="_blank"  
+     href="https://{{dato_usu}}/plataforma/cliente/movil/imprimir_pdf6.php?idusu={{usuario.id}}&resi={{usuario.id_residencial}}" >
+      <ion-icon name="card-outline"></ion-icon>
+
+       <ion-label>
+          <h3 class="title">Pagos</h3>
+        </ion-label>
+      </ion-item>
+
+
+
+ </ion-list>-->
+</ion-content>

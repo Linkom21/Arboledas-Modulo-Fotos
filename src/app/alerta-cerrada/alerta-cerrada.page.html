@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+   <ion-back-button class="regreso" defaultHref="/alerta-menu"></ion-back-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button class="regreso" [routerLink]="['/inicio']">
+      <ion-icon name="home" color="#083e54"></ion-icon>
+
+    </ion-button>
+  </ion-buttons>  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content class="ion-padding">
+
+  <br>
+  <div class="primer_titulo">
+  <label class="primer_titulo2">CERRADAS</label>
+</div>
+<br>
+  <ion-list *ngFor="let alerta of alertas">
+
+
+      <ion-item (click)="detalle(alerta)" >
+        <ion-label>
+          <h3 class="title">{{alerta.titulo}}</h3>
+          <h3 class="subtext">Folio:{{alerta.id}} / {{alerta.creacion}}</h3>
+
+        </ion-label>
+      </ion-item>
+
+ </ion-list>
+</ion-content>

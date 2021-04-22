@@ -1,0 +1,127 @@
+ion-header{
+    --ion-background-color:#b39b75;
+    --ion-text-color:#ffffff;
+         
+   }
+         
+   .regreso{
+      color: #083e54;
+    }
+   
+    .primer_titulo1{
+      font-size: 175%;
+      color: #083e54;
+      font-family: medium;
+      text-align: center;
+    }
+    
+    .primer_titulo2{
+      font-size: 175%;
+      color: #083e54;
+      font-family: bold;
+      text-align: center;
+    }
+    
+    .primer_titulo{
+      
+      text-align: center;
+    }
+  
+    
+    .title{
+       font-size: 100%;
+       padding-left: 10px;   
+      color: #ffffff;
+       font-family: medium;
+     }
+   
+     .title2{
+       font-size: 100%;
+       padding-left: 10px;   
+      color: #083e54;
+       font-family: medium;
+     }
+   
+   
+     .subtitle2{
+       font-size: 100%;
+       padding-left: 10px;   
+      color: #b39b75;
+       font-family: medium;
+     }
+   
+     
+     ion-item{
+       //--ion-background-color: #b39b75;
+       --ion-text-color:#b39b75;
+       --border-color: #083e54;
+     }
+   
+     ion-button{
+       --color:#ffffff;
+       --background: #b39b75;
+       font-weight:bold;
+       outline-color: #b39b75;
+       font-family: bold;
+     
+     }
+  
+     .title3{
+      font-size: 100%;
+     color: #b39b75;
+      font-family: black;
+      text-align: center;
+    }
+  
+  
+    
+  
+    .historial{
+        background-color: #083e54;
+    }
+  
+    .titleChat{
+      font-size: 100%;
+      padding-left: 10px;   
+      margin-top: 0;
+      color: #b39b75;
+      font-family: medium;
+  
+    }
+  
+    .subtext{
+      font-size: 80%;
+      padding-left: 10px;   
+      margin-top: 0;
+      color: #444444;
+      font-family: medium;
+  
+    }
+
+    .center{
+      text-align: center;
+    }
+    .jus{
+      text-align: justify;
+    }
+
+    .bot{
+      background-color: #b39b75;
+      font-size: 300%;
+      text-align: center;
+
+    }
+  
+ 
+   .icon2{
+     font-size: 500%;
+  color: #cf2a2a;
+     text-align: center;
+ 
+   }
+   .icon1{
+     font-size: 160%;
+  color: #083e54;
+     text-align: center;
+ 
+   }

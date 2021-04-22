@@ -1,0 +1,63 @@
+ion-header{
+  --ion-background-color:#b39b75;
+  --ion-text-color:#ffffff;
+
+}
+
+.regreso{
+  
+  color: #083e54;
+}
+
+.primer_titulo1{
+  font-size: 175%;
+  color: #083e54;
+  font-family: medium;
+  text-align: center;
+}
+
+.primer_titulo2{
+  font-size: 175%;
+  color: #083e54;
+  font-family: bold;
+  text-align: center;
+}
+
+.primer_titulo{
+  
+  text-align: center;
+}
+
+
+ion-item{
+  --ion-background-color: #b39b75;
+  --ion-text-color:#ffffff;
+  --border-color: #b39b75;
+}
+
+.espacio{
+  --ion-background-color: #ffffff;
+  padding-top: 0px;
+
+}
+.title{
+  font-size: 100%;
+  padding-left: 10px;   
+ color: #ffffff;
+  font-family: medium;
+}
+  .subtext{
+    font-size: 80%;
+    padding-left: 10px;   
+    margin-top: 0;
+    color: #444444;
+    font-family: medium;
+
+  }
+
+  ion-fab-button{
+    color: #ffffff;
+    //border-color: #ffffff;
+   // --background:#ffffff;
+    --ion-color-base: #083e54;
+  }

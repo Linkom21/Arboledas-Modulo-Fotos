@@ -1,0 +1,170 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="regreso" (click)="closeModal()" >
+        <ion-icon name="close"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    <ion-item lines="none">
+
+    <label class="title"> Información
+    </label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<ion-list *ngFor="let usus of usu">
+
+   <ion-item lines="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div>
+            <ion-buttons  slot="end"> 
+              <ion-button  target="_blank" href="https://{{domi}}/plataforma/cliente/{{tipo_usu}}/imprimir_invitacion.php?id={{id}}&resi={{usus.id_residencial}}&idusu={{usus.id}}" color="primary">
+                Descargar PDF
+              </ion-button>
+
+             </ion-buttons>          </div>
+        </ion-col>
+      
+      </ion-row>
+    </ion-grid>
+  </ion-item> 
+  </ion-list>-->
+  <ion-list *ngFor="let visita of visitass">
+<ion-item lines="none">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="title2" size="5">
+        <div>
+          Estimado:
+        </div>
+      </ion-col>
+      <ion-col class="subtitle2" size="7">
+        <div>
+          {{visita.nombre_visita}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+  </ion-list>
+
+
+  <ion-item lines="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="title2" size="12">
+          <div>
+            Usted ha recibido una invitación:
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+
+    <ion-list *ngFor="let usus of usu">
+<ion-item >
+  <ion-grid>
+    <ion-row>
+      
+      <ion-col class="subtitle2" size="12">
+        <div class="jus">
+          {{usus.nombre}} {{usus.a_paterno}} {{usus.a_materno}}  le ha enviado una autorización para ingresar a {{nombre_lu}}, para poder acceder por favor presente el siguiente mensaje.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+  </ion-list>
+
+  <ion-list *ngFor="let visitasr of visitasreg">
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          
+          <ion-col  class="title2" size="12">
+            <div>
+              Fecha Programada:
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="title2" size="2">
+            <div>
+              Del:
+            </div>
+          </ion-col>
+          <ion-col class="subtitle2" size="10">
+            <div>
+              {{visitasr.fecha_entrada}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item >
+      <ion-grid>
+        <ion-row>
+          <ion-col class="title2" size="2">
+            <div>
+              Al:
+            </div>
+          </ion-col>
+          <ion-col class="subtitle2"  size="10">
+            <div>
+              {{visitasr.fecha_salida}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    
+
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="title2" size="4">
+            <div>
+              Código qr:
+            </div>
+          </ion-col>
+          <ion-col class="subtitle2" size="8">
+            <div>
+              {{visitasr.codigo_qr}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item lines="none" >
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <div class="center">
+              <img src="https://{{domi}}/plataforma/cliente/{{tipo_usu}}/controlador/imageqr/{{visitasr.codigo_qr}}.png"  height='120' width='120' alt=""> 
+              <!-- <img src="http://localhost/residencial_app_ionic/api/qr/{{visitasr.codigo_qr}}.png"  height='120' width='120' alt="">  -->
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+
+    
+    </ion-list>
+
+  </ion-content>

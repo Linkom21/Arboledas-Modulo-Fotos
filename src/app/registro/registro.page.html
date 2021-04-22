@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+  
+
+  <ion-buttons slot="end">
+    <ion-button class="regreso" [routerLink]="['/home']">
+      <ion-icon name="close" color="#083e54"></ion-icon>
+
+    </ion-button>
+
+   
+  </ion-buttons>
+  <ion-item lines="none">
+    <label class="title">Registro</label>
+    </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <br>
+ 
+
+
+
+<form [formGroup]="myForm" (submit)="onSubmit()">
+
+
+  <ion-item class="lista" >
+    <ion-input type="text" [(ngModel)]="nombre"placeholder="Nombre" formControlName="nombre" required></ion-input>
+  </ion-item>
+  <ion-item class="lista">
+    <ion-input type="text" [(ngModel)]="apellido_paterno" placeholder="Apellido Paterno" formControlName="apellido_paterno" required></ion-input>
+  </ion-item>
+
+  <ion-item class="lista">
+    <ion-input type="text" [(ngModel)]="apellido_materno" placeholder="Apellido Materno" formControlName="apellido_materno" required></ion-input>
+  </ion-item>
+
+  <ion-item class="lista">
+    <ion-input type="text" [(ngModel)]="correo" placeholder="Correo Electrónico" formControlName="correo" required></ion-input>
+  </ion-item>
+
+  <ion-item class="lista">
+    <ion-input type="text" [(ngModel)]="up" placeholder="Unidad Privativa" formControlName="up" required></ion-input>
+  </ion-item>
+  
+  
+  <br>
+  <br>
+    <ion-button  type="submit" >Registrar</ion-button> 
+
+  
+
+      <br>
+    
+</form>
+  <br>
+  <br>
+  <div class="primer_titulo">
+    <label class="primer_titulo1">powered by linkom ® v.5.2.4</label>
+  </div>
+</ion-content>

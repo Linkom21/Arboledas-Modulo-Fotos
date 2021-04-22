@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="regreso" defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="regreso" [routerLink]="['/inicio']">
+        <ion-icon name="home" color="#083e54"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+ 
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <br>
+  <div class="primer_titulo">
+  <label class="primer_titulo2">DOCUMENTOS</label>
+</div>
+<br>
+  <ion-list>
+
+    <ion-item [routerLink]="['/documentos']" >
+      <ion-icon name="people" color="#ffffff"></ion-icon>
+
+      <ion-label>
+        
+         <h3 class="title">        Generales</h3>
+       </ion-label>
+     </ion-item>
+
+     
+ </ion-list>
+<br>
+ <ion-list>
+   <ion-item [routerLink]="['/documentos2']" >
+    <ion-icon name="person" color="#ffffff"></ion-icon>
+
+     <ion-label>
+        <h3 class="title">Personales</h3>
+      </ion-label>
+    </ion-item>
+</ion-list>
+
+</ion-content>

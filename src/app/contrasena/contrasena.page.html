@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button  class="regreso" (click)="closeModal()">
+       <ion-icon name="close"></ion-icon>
+      </ion-button>
+     </ion-buttons>
+     <ion-item lines="none">
+      <label class="title">Recuperar Contraseña</label>
+      </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <br>
+  <br>
+  <form [formGroup]="myForm" (submit)="onSubmit()">
+
+   
+
+    <ion-item  class="cuadro">
+      <ion-input type="text" [(ngModel)]="correo" placeholder="Correo Electrónico" formControlName="correo" required></ion-input>
+    </ion-item>
+
+   
+    
+    <br>
+    <br>
+      <ion-button  type="submit" >Iniciar Sesión</ion-button> 
+
+    
+
+        <br>
+    </form>
+        
+</ion-content>

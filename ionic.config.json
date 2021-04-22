@@ -1,0 +1,10 @@
+{
+  "name": "Arboledas",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

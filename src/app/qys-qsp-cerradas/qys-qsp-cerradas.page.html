@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+   <ion-back-button  class="regreso" defaultHref="/qys-mqs-ac-menu"></ion-back-button>
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button class="regreso" [routerLink]="['/inicio']">
+      <ion-icon name="home" color="#083e54"></ion-icon>
+
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="ion-padding">
+
+  <br>
+  <div class="primer_titulo">
+<label class="primer_titulo2">CERRADAS</label>
+</div>
+<br>
+
+
+  <ion-list *ngFor="let quejas of queja">
+
+
+      <ion-item (click)="detalle(quejas)">
+        <ion-label>
+          <h3 class="title">{{quejas.titulo}}</h3>
+          <h3 class="subtext">Folio:{{quejas.id}} / {{quejas.creacion}}</h3>
+
+        </ion-label>
+      </ion-item>
+      <div class="espacio"></div> 
+
+    
+
+ </ion-list>
+</ion-content>

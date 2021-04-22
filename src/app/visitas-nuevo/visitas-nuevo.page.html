@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button  class="regreso" (click)="closeModal()">
+       <ion-icon name="close"></ion-icon>
+      </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <div class="primer_titulo">
+  <label class="primer_titulo1" >NUEVA </label><label class="primer_titulo2">VISITA</label>
+</div>
+<br>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-list hidden *ngFor="let usuarios of usuario">
+
+    <ion-item>
+      <ion-label position="floating">Residencial</ion-label>
+      <ion-input ngModel="{{usuarios.id_residencial}}" name="id_residencial"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input ngModel="{{usuarios.id}}" name="id_usuario"></ion-input>
+
+    </ion-item>
+
+    </ion-list>
+
+    <ion-item  class="relleno2">
+
+      <ion-input ngModel name="nombre_visita" placeholder="Nombre"></ion-input>
+    </ion-item>
+      <br>
+
+    <ion-item class="relleno" lines="none">
+      <ion-label class="title"><strong>Entrada</strong></ion-label><br>
+    </ion-item>
+
+    <ion-item class="relleno" lines="none">
+      <ion-label class="subtitle">Día Entrada</ion-label><br>
+      <ion-datetime   displayFormat="DD-MM-YYYY" pikerFormat="YYYY MM DD" ngModel name="fecha"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="relleno"lines="none">
+      <ion-label class="subtitle">Hora Entrada (24 Hrs.)</ion-label>
+      <ion-datetime displayFormat="hh:mm A"   ngModel name="hora1"></ion-datetime>
+
+    </ion-item>
+
+    <br>
+
+      
+
+      <ion-item class="relleno" lines="none">
+        <ion-label  class="title"  ><strong>Salida</strong></ion-label><br>
+      </ion-item>
+
+       <ion-item class="relleno" lines="none"> 
+        <ion-label class="subtitle">Valida hasta:</ion-label>
+        <ion-select ngModel name="hora2">
+          <ion-select-option value="5" >1 Hora</ion-select-option> 
+          <ion-select-option value="3" >3 Horas</ion-select-option> 
+          <ion-select-option value="4" >6 Horas</ion-select-option> 
+          <ion-select-option value="1">12 Horas</ion-select-option> 
+          <ion-select-option value="2">24 Horas</ion-select-option> 
+        </ion-select>
+      </ion-item>
+
+
+      <br>
+      <div class="center">
+  
+        <ion-button  type="submit">Registrar</ion-button>
+        </div>
+  </form>
+</ion-content>

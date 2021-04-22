@@ -1,0 +1,96 @@
+
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="end">
+   <ion-button  class="regreso" (click)="closeModal()">
+    <ion-icon name="close"></ion-icon>
+   </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <div class="primer_titulo">
+  <label class="primer_titulo1" >NUEVA </label><label class="primer_titulo2">QUE. Y SUG.</label>
+</div>
+<br>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit_qs(f)">
+
+    <ion-list hidden *ngFor="let usuario of usuarios">
+
+    <ion-item >
+      <ion-label position="floating">Residente</ion-label>
+      <ion-input  ngModel="{{usuario.id_residencial}}" name="id_residencial"  ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  ngModel="{{usuario.id}}" name="id_usuario"></ion-input>
+    </ion-item>
+    </ion-list>
+
+      <ion-item hidden>
+
+        <ion-label>Archivo</ion-label><br>
+         <ion-button slot="end">
+             <ion-icon name="link" ></ion-icon>
+             </ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="title2">Publica</ion-label>    
+           <ion-toggle class="subtitle2" ngModel name="publico" ></ion-toggle>
+         </ion-item>
+
+     <ion-item>
+          <ion-label class="title2">Departamentos</ion-label>
+          <ion-select ngModel name="id_departamento">
+            <ion-select-option value="{{departamento.id}}" *ngFor="let departamento of departamentos">{{departamento.nombre}}</ion-select-option> 
+          </ion-select>
+        </ion-item>    
+
+    <ion-item >
+      <ion-input class="subtitle2"  ngModel name="titulo" placeholder="Asunto" ></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-input   class="subtitle2" ngModel name="descripcion" placeholder="Descripción"></ion-input>
+    </ion-item>
+
+    
+    <form #f="ngForm" (submit)="onSubmit(f)">
+
+      <ion-input [(ngModel)]="data.foto_uno" disabled="true" type="text" name="foto_uno">{{imagePath}}</ion-input>
+      <ion-item>
+        <ion-button (click)="addPhoto('camera')" class="center" expand="block">
+          <ion-icon name="camera" slot="start"></ion-icon>
+          Tomar Foto
+        </ion-button>
+  
+        <ion-button (click)="addPhoto('library')" class="center" expand="block">
+          <ion-icon name="image" slot="start"></ion-icon>
+          Seleccionar imagen
+        </ion-button>
+  
+        <div class="flex">
+          <div class="img-box">
+            <img [src]="image">
+          </div>
+        </div>
+      </ion-item>
+  
+     
+    </form>
+    <br>
+    <div class="center">
+
+      <ion-button  type="submit">Registrar</ion-button>
+      </div>
+  </form>
+  
+
+  
+</ion-content>

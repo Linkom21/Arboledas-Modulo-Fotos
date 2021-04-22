@@ -1,0 +1,49 @@
+<ion-content >
+  <ion-img src="../assets/img/logoKAP.png"></ion-img>
+  <br>
+  <br>
+  <form [formGroup]="myForm" (submit)="onSubmit()">
+
+    
+
+    <ion-item >
+      <ion-input type="text" [(ngModel)]="usuario" placeholder="Usuario" formControlName="usuario" required></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-input type="password" [(ngModel)]="contrasenia" placeholder="Contraseña" formControlName="contrasenia" 
+      [type]="passworType" required></ion-input>
+        <ion-icon slot="end" [name]="passworToggleIcon" [color]="passwordShow == true ? 'white' : 'white'"  (click)="togglePassword()"></ion-icon>
+      
+    </ion-item>
+    
+    <br>
+    <br>
+      <ion-button  type="submit" >Iniciar Sesión</ion-button> 
+
+    
+
+        <br>
+      
+  </form>
+<!--
+  
+  <br>
+  <br>
+  <br>
+   <a (click)="ver()" class="olvido">¿Olvidaste tu contraseña? </a> -->
+  <br>
+  <ion-item  lines="none" [routerLink]="['/registro']" >
+     <ion-label  class="regis">
+     <h3 class="title" >Registrate</h3>
+   </ion-label>
+   </ion-item>
+
+  <br>
+  <br>
+  <div class="primer_titulo">
+    <label class="primer_titulo1" >powered by linkom ® v.5.2.4</label>
+  </div>
+
+  
+</ion-content>

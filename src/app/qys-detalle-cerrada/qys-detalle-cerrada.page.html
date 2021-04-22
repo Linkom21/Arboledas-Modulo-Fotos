@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  class="regreso" defaultHref="/inicio"></ion-back-button>
+     </ion-buttons>
+
+     <ion-buttons slot="end">
+
+      <ion-button class="regreso" [routerLink]="['/inicio']">
+        <ion-icon name="home" color="#083e54"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<br>
+  <div class="primer_titulo" >
+  <label class="primer_titulo2">DETALLE</label>
+</div>
+<br>
+<ion-list *ngFor="let quejas of queja">
+
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="title2" size="3">
+        <div>
+          Estatus:
+        </div>
+      </ion-col>
+      <ion-col class="subtitle2" size="3">
+        <div>
+          Cerrada
+        </div>
+      </ion-col>
+      <ion-col class="title2" size="3">
+        <div>
+          Folio:
+        </div>
+      </ion-col>
+      <ion-col  class="subtitle2" size="3">
+        <div>
+          # {{quejas.id}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="title2" size="3">
+        <div>
+          Titulo:
+        </div>
+      </ion-col>
+      <ion-col class="subtitle2" size="9">
+        <div>
+          {{quejas.titulo}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="title2" size="4">
+        <div>
+          Usuario:
+        </div>
+      </ion-col>
+      <ion-col class="subtitle2" size="8">
+        <div>
+          {{quejas.nombre}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>  
+
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col  class="title2" size="12">
+        <div class="center" >
+          Historial
+        </div>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+</ion-item>
+</ion-list>
+
+
+
+<ion-content>
+
+<ion-list *ngFor="let mensaje of mensajes">
+
+
+  <ion-item >
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div>
+            <h6 class="titleChat">{{mensaje.mensaje}}</h6> 
+            <br>
+            <p class="subtext">Por: {{mensaje.nombre}}, el {{mensaje.fecha}}</p>
+
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+</ion-list>
+</ion-content>

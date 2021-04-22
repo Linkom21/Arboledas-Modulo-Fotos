@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="regreso" defaultHref="/documentos2"></ion-back-button>
+    </ion-buttons>
+ 
+    <ion-buttons slot="end">
+      <ion-button class="regreso" [routerLink]="['/inicio']">
+        <ion-icon name="home" color="#083e54"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+
+ 
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+<br>
+  <div class="primer_titulo" *ngFor="let catedocus of catdocu">
+    <label class="primer_titulo2">{{catedocus.nombre | uppercase }}</label>
+</div>
+<br>
+  
+  <ion-list *ngFor="let documento_per of documentos_per">
+
+
+      <ion-item (click)="ver(documento_per)" >
+        <ion-label>
+
+          <h3 class="title">{{documento_per.titulo}}</h3>
+          <h3 class="subtext">Folio:{{documento_per.id}} / {{documento_per.fecha_actualizacion}}</h3>
+
+        </ion-label>
+      </ion-item>
+      <div class="espacio"></div> 
+
+      
+
+ </ion-list>
+</ion-content>
